@@ -80,6 +80,7 @@
     </platform>
     <allow-navigation href="http://179.106.229.181:8100" />
     <engine name="android" spec="^6.3.0" />
+    <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="2.2.2" />

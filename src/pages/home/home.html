@@ -1,7 +1,7 @@
 <ion-header no-border>
   <ion-navbar color="secondary">
     <ion-title>
-      ClouDO Exemplo ionic 3 pouchdb e couchdb sync
+      Note with attachments
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="createTodo()"><ion-icon name="cloud-upload"></ion-icon></button>
@@ -29,9 +29,12 @@
         <button ion-button icon-only color="primary" (click)="deleteTodo(todo)">
           <ion-icon name="ios-trash-outline"></ion-icon>
         </button>
+        <button (click)="takePicture(todo)">
+          <ion-icon name="camera"></ion-icon>
+        </button>
       </ion-item-options>
     </ion-item-sliding>
  
   </ion-list>
- 
+   <img [src]="base64Image" *ngIf="base64Image" />
 </ion-content>

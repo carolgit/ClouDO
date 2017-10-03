@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TodosProvider } from '../providers/todos/todos';
 import { HttpModule } from '@angular/http';
+import {Camera} from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TodosProvider
+    TodosProvider,
+    Camera
   ]
 })
 export class AppModule {}
