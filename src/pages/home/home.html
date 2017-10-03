@@ -1,14 +1,37 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar color="secondary">
     <ion-title>
-      Ionic Blank
+      ClouDO Exemplo ionic 3 pouchdb e couchdb sync
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createTodo()"><ion-icon name="cloud-upload"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+<ion-content>
+ 
+  <ion-list>
+    <ion-list-header style="font-weight:bold; font-size:120%;">
+      Notes
+    </ion-list-header>
+    <ion-item-sliding *ngFor="let todo of todos">
+ 
+      <ion-item>
+        {{todo.title}} 
+        <ion-icon name="book" item-right></ion-icon>
+      </ion-item>
+ 
+      <ion-item-options side="right">
+        <button ion-button icon-only color="light" (click)="updateTodo(todo)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button ion-button icon-only color="primary" (click)="deleteTodo(todo)">
+          <ion-icon name="ios-trash-outline"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+ 
+  </ion-list>
+ 
 </ion-content>
